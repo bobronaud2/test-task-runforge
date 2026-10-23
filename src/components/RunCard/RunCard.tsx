@@ -30,7 +30,7 @@ export function RunCard({ run, onSelect }: RunCardProps) {
         <span className={styles.metaLabel}>Создан</span>
         <time dateTime={run.createdAt}>{formatDate(run.createdAt)}</time>
       </span>
-      <span className={styles.meta}>
+      <span className={`${styles.meta} ${styles.duration}`}>
         <span className={styles.metaLabel}>Длительность</span>
         {formatDuration(run.durationSeconds)}
       </span>

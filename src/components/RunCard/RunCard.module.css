@@ -59,6 +59,12 @@
   font-size: var(--font-size-sm);
 }
 
+.duration {
+  justify-self: end;
+  align-items: flex-end;
+  text-align: right;
+}
+
 .metaLabel {
   color: var(--color-muted);
   font-size: var(--font-size-xs);
@@ -70,8 +76,11 @@
     align-items: center;
   }
 
-  .status {
+  .status,
+  .duration {
     justify-self: start;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .metaLabel {
