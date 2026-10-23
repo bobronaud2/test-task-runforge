@@ -1,0 +1,85 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-2) var(--space-4);
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-align: left;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.source {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-muted);
+  font-size: var(--font-size-sm);
+  overflow-wrap: anywhere;
+}
+
+.branch {
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-code-bg);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+}
+
+.status {
+  justify-self: end;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-sm);
+}
+
+.metaLabel {
+  color: var(--color-muted);
+  font-size: var(--font-size-xs);
+}
+
+@media (min-width: 768px) {
+  .card {
+    grid-template-columns: minmax(0, 1fr) 120px 170px 120px;
+    align-items: center;
+  }
+
+  .status {
+    justify-self: start;
+  }
+
+  .metaLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

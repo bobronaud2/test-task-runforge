@@ -1,0 +1,43 @@
+.header {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+.mark {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: var(--color-bg);
+  transform: rotate(45deg) scale(0.8);
+}
+
+.link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid currentColor;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding: var(--space-3) var(--space-6);
+  }
+}

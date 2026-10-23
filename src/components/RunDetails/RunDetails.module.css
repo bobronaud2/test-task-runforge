@@ -1,0 +1,115 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  background: var(--color-overlay);
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: min(560px, 100%);
+  height: 100%;
+  padding: var(--space-5) var(--space-4);
+  overflow-y: auto;
+  background: var(--color-bg);
+  box-shadow: var(--shadow-lg);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.back {
+  padding: var(--space-2) 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.facts dt {
+  color: var(--color-muted);
+  font-size: var(--font-size-xs);
+}
+
+.facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: var(--font-size-md);
+  color: var(--color-primary);
+}
+
+.result {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.placeholder {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.logs {
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  .drawer {
+    padding: var(--space-6);
+  }
+}
